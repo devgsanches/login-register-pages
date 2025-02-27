@@ -25,6 +25,10 @@ main section {
   grid-template-columns: repeat(2, 1fr);
 }
 
+main section .logo-icon {
+  display: none;
+}
+
 main section .form-container {
   background-color: #fff;
   border: 0.4rem solid #000;
@@ -96,6 +100,14 @@ main section .form-container form .socials {
   gap: 1.5rem;
 }
 
+main section .form-container form .socials .google p {
+  display: none;
+}
+
+main section .form-container form .socials .facebook p {
+  display: none;
+}
+
 main section .image-container {
   width: 56.2rem;
   height: 73.2rem;
@@ -105,4 +117,99 @@ main section .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+    background: url('/assets/images/bg-mobile.svg');
+  }
+
+  main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  main section .logo-icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 0;
+    margin-top: 5.4rem;
+  }
+
+  main section .form-container {
+    background-color: #ffffff00;
+    border: none;
+    width: 32.9rem;
+    height: 49.957rem;
+  }
+
+  main section .image-container {
+    display: none;
+  }
+
+  main section .form-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0rem 0rem 0rem 0rem;
+    gap: 1.6rem;
+  }
+
+  main section .form-container form input {
+    width: 32.9rem;
+    height: 6rem;
+    border: 3px solid #000;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    padding: 1.45rem 0rem 1.45rem 0.8rem;
+  }
+
+  main section .form-container form h2 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.873rem;
+    letter-spacing: 0%;
+    margin-bottom: 3.2rem;
+  }
+
+  main section .form-container form .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-flow: column-reverse;
+    margin-top: 2.2rem;
+    gap: 2.4rem;
+  }
+
+  main section .form-container form .register button {
+    margin-left: 0rem;
+    width: 100%;
+    height: 5.9rem;
+  }
+
+  main section .form-container form p {
+    display: none;
+  }
+
+  main section .form-container form .socials {
+    display: flex;
+  }
+
+  main section .form-container form .socials .google img {
+    width: 9rem;
+  }
+
+  main section .form-container form .socials .facebook img {
+    width: 9rem;
+  }
+
+  main section .form-container .logo {
+    display: none;
+  }
 }
